@@ -1,9 +1,11 @@
 <?php
 $titulek = 'uzivatelsky profil';
-$profil = ['jmeno' => 'Pavel', 'Prijmeni' => 'Urban' ]
-
+$profil = ['jmeno' => 'Pavel', 'prijmeni' => 'Urban' ];
+$profil['vek'] = 31;
+$profil['konicky'] = ['programovani'];
+$profil['konicky'][] = 'rybareni';
+$profil['konicky'][] = 'plavani'
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -68,14 +70,23 @@ $profil = ['jmeno' => 'Pavel', 'Prijmeni' => 'Urban' ]
         </h1>
         <table class="table">
             <tbody>
-            <tr>
-                <th>
-                    Jmeno:
+                <tr>
+                     <th>Jmeno:</th>
+                         <td> <?php echo $profil['jmeno'];?> </td>
+                 </tr>
+                <tr>
+                     <th>Prijmeni:</th>
+                           <td><?php echo $profil['prijmeni'];?></td>
+                </tr>
+                <tr>
+                    <th>Vek:</th>
+                    <td><?php echo $profil['vek'];?></td>
+                </tr>
+                <tr>
+                    <th>Konicky:</th>
+                    <td><?php print_r ($profil['konicky']);?></td>
+                </tr>
 
-                <td>
-                    <?php echo $profil['jmeno'];?>
-                        </td>
-            </tr>
             </tbody>
         </table>
             </div>
