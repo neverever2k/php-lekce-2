@@ -1,7 +1,6 @@
+<?php
+$vyska = 6 * sin(60);
+var_dump($vyska);
 
-
-
-
-Jmeno: <?php echo 'Ahoj!';?> 21.2.2019
 
 
