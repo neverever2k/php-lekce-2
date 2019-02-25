@@ -23,6 +23,7 @@ $obsah = $vyska *$strana /2;
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
@@ -100,11 +101,11 @@ $obsah = $vyska *$strana /2;
         </div>
 
         <div class="col-md-6">
-            <h2>Rovnoramenny trojuhelnik</h2>
+            <h2>Rovnostranny trojuhelnik</h2>
             <table class="table">
                 <tbody>
                 <tr>
-                    <th>Strana a</th>
+                    <th>Strana</th>
                     <td> <?php echo $strana;?> </td>
                 </tr>
                 <tr>
@@ -112,12 +113,16 @@ $obsah = $vyska *$strana /2;
                     <td><?php echo $uhel;?></td>
                 </tr>
                 <tr>
-                    <th>Vyska:  a * sinα</th>
-                    <td><?php echo $profil['vek'];?></td>
+                    <th>Obvod 3 * a: </th>
+                    <td><?php echo $strana * 3;?></td>
                 </tr>
                 <tr>
-                    <th>Obsah:</th>
-                    <td><?php print_r ($profil['konicky']);?></td>
+                    <th>Vyska v:  a * sinα</th>
+                    <td><?php echo round($strana * sqrt(3) /2);?></td>
+                </tr>
+                <tr>
+                    <th>Obsah: v * a / 2</th>
+                    <td><?php echo round($vyska *$strana /2);?></td>
                 </tr>
 
                 </tbody>
@@ -125,7 +130,43 @@ $obsah = $vyska *$strana /2;
         </div>
     </div>
 </div>
-Obsah obdelniku o stranach: <?php echo "a: $a cm b: $b cm je $obdelnikObsah cm2";?>
-<p>Obsah rovnostranneho Trojuhelniku o strane: <?php echo "$strana je $obsah cm2" ;?></p>
+<div class="container">
+    <div class="row">
+     <div class="col-md-4">
+         <h2>Pravouhly trojuhelnik</h2>
+         <p>Znalosti o nem sahaji az do 6 stoleti prnl. Pythagoras je nejslavnejsi matematik teto doby a objevil dodnes pouzivanou vetu nesouci jeho jmeno: <h4>Součet obsahů čtverců nad odvěsnami pravoúhlého trojúhelníku je roven obsahu čtverce nad jeho přeponou.</h4> </p>
+         <p><h4><u>c2 = a2 + b2</u></p>  </h4>
+
+     </div>
+     <div class="col-md-8">
+         <img src="img/Ptroj.jpg" class="img-fluid" alt="Responsive image">
+
+      </div>
+    </div>
+</div>
+<footer>
+    <div class="container footer-content">
+        <div class="row-fluid">
+          <p></p>
+        </div>
+    </div>
+<div class="container">
+    <div class="col-md-12">
+        <div class="jumbotron">
+                &copy; Copyright 2017-2019
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th> <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/Pythagoras-121951847848481/"><u>Facebook</u></a>
+                    </th>
+                    <th>  <i class="fab fa-youtube"></i>
+                        <a href="https://www.youtube.com/watch?v=Fc6W38etMHg"><u>Youtube</u></a>
+                    </th>
+                </tr>
+        </div>
+</div>
+
+</footer>
 
 </body>

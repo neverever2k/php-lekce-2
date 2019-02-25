@@ -1,5 +1,7 @@
 <?php
-$vyska = 6 * sin(60);
+$strana = '6';
+
+
 var_dump($vyska);
 
 
